@@ -45,19 +45,19 @@ body pre {
 }
 body #main a.star,
 .icon-star {
-    color: #eee !important;
+    color: #eee;
 }
 body #main a.star.starred,
 body #main .topic-list-item a.star.starred,
 .icon-star.starred,{
-    color: #E45735 !important;
+    color: #E45735;
 }
 body #main .topic-list-item a.star,{
-    color: #eee !important;
+    color: #eee;
 }
 
 body #main .d-header .extra-info-wrapper a.star.starred{
-    color: #fff !important;
+    color: #fff;
 }
 
 
