@@ -287,7 +287,7 @@ body #main .topic-list-item a.star.starred,{
     z-index: 1;
 }
 .full-width {
-    width: auto;
+    width: auto !important;
 }
 #topic-list {
     border-collapse: collapse;
