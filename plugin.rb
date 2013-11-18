@@ -414,4 +414,15 @@ body #main .topic-list-item a.star.starred,{
     margin-bottom: 0;
 }
 
+/**
+ * Marco
+ **/
+
+#topic-list .posters{
+    width: 180px;
+}
+#topic-list .posts{
+    width: 60px;
+}
+
 CSS
