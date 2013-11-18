@@ -1,199 +1,416 @@
 # name: discourse-ubuntu
 # about: ubuntu style for Discourse
-# version: 0.1
+# version: 0.2
 # authors: Marco Ceppi
 
 register_css <<CSS
 
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
-html {
-    background: url(http://assets.ubuntu.com/sites/ubuntu/latest/u/img/patterns/body_bg.jpg) !important;
-}
 
-html, .body-page {
-    font-family: "Ubuntu Light", "Ubuntu", Arial, Helvetica, sans-serif;
+/**
+ * Ubuntu Discourse
+ *
+ * Scratch CSS file for desktop version of Ubuntu Discourse
+ * 
+ * @project     Ubuntu Discourse Framework
+ * @author      Web Team at Canonical Ltd
+ * @copyright   2013 Canonical Ltd
+ *
+ * Contents:
+ *  - General
+ *  - Header
+ *  - Tabs
+ *  - Innerpage
+ *  - Buttons
+ *  - Meta
+ *  - Bio
+ */
+
+/**
+ * General
+ */
+
+body,
+.onebox-result .onebox-result-body{
+    font-family: Ubuntu,Arial,"libra sans",sans-serif;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
     font-weight: 300;
-    font-size: 16px;
+}
+body code,
+body pre {
+    font-family: "Ubuntu Mono","Consolas","Monaco","Lucida Console","Courier New",Courier,monospace;
+}
+body #main a.star,
+.icon-star {
+    color: #E45735 !important;
+}
+body #main a.star.starred,
+.icon-star.starred {
+    color: #ffffff !important;
+}
+body #main .topic-list-item a.star,{
+    color: #ffffff !important;
+}
+body #main .topic-list-item a.star.starred,{
+    color: #E45735 !important;
 }
 
-/* Links should be a nice orange. */
-a {
-    color: #dd4814;
+.dropdown-toggle span.caret {
+    border-top: 4px solid #FFFFFF;
 }
 
-a:visited {
-    color: #c03f11;
-}
+/**
+ * Header
+ */
 
-a:hover {
-    color: #F47F31;
-}
 
-/* Set the background color of the header bar to orange and adjust the border. */
-.d-header {
-    background-color: #dd4814;
-    border-bottom: 1px solid white;
-    box-shadow: 0 1px 2px #fff;
-    height: 60px;
+#main .d-header {
+    background: #DD4814;
+    border-top: 0 none;
+    -moz-box-shadow: 0 2px 2px -2px #777777 inset, 2px 1px #FFFFFF;
+    -webkit-box-shadow: 0 2px 2px -2px #777777 inset, 2px 1px #FFFFFF;
+    box-shadow: 0 2px 2px -2px #777777 inset, 2px 1px #FFFFFF;
+    display: inline-block;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
 }
-
-.d-header #site-logo {
-    width: auto;
-    height: 40px;
+#main .d-header .extra-info h1 {
+    font-size: 32px;
+    font-weight: 300;
 }
-
-/* Remove the margin from the header. */
-.d-header .contents {
+.docked #main .d-header {
+    position: fixed;
+}
+.docked #main .d-header .title:after {
+    content: "";
+}
+#main .d-header .contents {
     margin: 0;
 }
-
-/* Make the header taller */
-.d-header .contents > div {
-    padding: 10px 0;
+#main .d-header .extra-info-wrapper {
+    width: 68%;
+}
+#main .d-header .extra-info-wrapper a,
+#main .d-header .title a {
+    color: #ffffff;
+}
+#main .d-header .title,
+#main .d-header .current-username {
+    padding-top: 4px;
+}
+#main .d-header .title:after {
+    content: "discourse";
+    float: left;
+    font-size: 23px;
+    font-weight: 300;
+    padding-left: 6px;
+    position: relative;
+    top: 13px;
+    color: #ffffff;
 }
 
-.d-header .contents .panel {
+#main .d-header .icon,
+#main .d-header .current-username a {
+    color: #ffffff;
+    font-weight: normal;
+}
+#main .d-header #notifications-dropdown.d-dropdown .icon,
+#main .d-header #site-map-dropdown.d-dropdown .icon {
+    color: #777777;
+}
+#main .d-header .icons {
+    height: 48px;
+    overflow: hidden;
+    border-right: 1px solid #EC5B29;
+}
+#main .d-header .icons li {
+    border-left: 1px solid #C64012;
+    float: left;
+    list-style-image: none;
+    margin: 0;
+    text-indent: 0;
+    vertical-align: bottom;
+}
+#main .d-header .icons li:last-child {
+    border-right: 1px solid #C64012;
+}
+#main #list-area {
+    margin-bottom: 0;
+}
+#main .d-header .icons li a.icon:link,
+#main .d-header .icons li a.icon:visited,
+#main .d-header .icons li i.icon-user {    
+    border: 0;
+    border-left: 1px solid #EC5B29;
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 9px 14px 6px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    height: 33px;
+}
+#main .d-header .icons .d-dropdown li a:link,
+#main .d-header .icons .d-dropdown li a:visited {
+    color: #dd4814;
+}
+#main .d-header .icons li i.icon-user {
+    border: 0;
+}
+#main .d-header .icons li a.icon:hover,
+#main .d-header .icons li i.icon-user:hover {
+    background-color: #E1662F;
+}
+#main .d-header .icons li a.active,
+#main .d-header .icons li i.icon-user.active {
+    
+}
+.d-header .icons .active .icon {
+    background-color: #B83A10;
+}
+#main .d-header .icons li.current-user div.icon {
+    border-left: 1px solid #EC5B29;
+}
+#main .d-header .icons li.current-user i.icon {
+    padding: 0;
+    border-left: 1px solid #EC5B29;
+}
+#main .d-header .icon-comment {
+    background-image: url("http://assets.ubuntu.com/sites/ubuntu/latest/u/img/messages-white.png"), url("http://assets.ubuntu.com/sites/ubuntu/latest/u/img/messages-white.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center center;
+}
+#main .d-header .icon-comment:before {
+    content:"";
+}
+#main .d-header .icon-search {
+    background-image: url("http://assets.ubuntu.com/sites/ubuntu/latest/u/img/search.png"), url("http://assets.ubuntu.com/sites/ubuntu/latest/u/img/search.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center center;
+}
+#main .d-header .icon-search:before {
+    content:"";
+}
+#main .d-header .icon-reorder {
+    background-image: url("http://assets.ubuntu.com/sites/ubuntu/latest/u/img/navigation-menu.png"), url("http://assets.ubuntu.com/sites/ubuntu/latest/u/img/navigation-menu.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center center;
+}
+#main .d-header .icon-reorder:before {
+    content:"";
+}
+#main .d-header .icon-user {
+    background-image: url("http://assets.ubuntu.com/sites/ubuntu/latest/u/img/contact.png"), url("http://assets.ubuntu.com/sites/ubuntu/latest/u/img/contact.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center center;
+}
+#main .d-header .icon-user:before {
+    content:"";
+}
+#main .d-header .current-username button {
+    margin-top: 5px;
+}
+.icon-home {
+    margin-left: 10px;
+}
+#main .d-header .icons li a.badge-notification {
+    padding: 5px;
+    height: 10px;
+    position: relative;
+    z-index: 10;
+    top: -48px;
+    left: 20px;
+    font-size: 12px;
+}
+
+/**
+ * Tabs
+ */
+
+.nav-pills a {
+    font-family: Ubuntu,Arial,"libra sans",sans-serif;
+    border-radius: 4px;
+}
+.nav-pills>li.active>a, 
+.nav-pills>li>a.active {
+    border: 0;
+    background-color: #AEA79F;
+}
+.badge-category {
+    border-radius: 4px;
+    font-weight: 300;
+}
+
+/**
+ * Innerpage
+ */
+
+.posts-wrapper .row {
+    padding-bottom: 0;
+}
+.row .row {
     padding: 0;
 }
 
-.d-header .contents .current-username a {
-    padding: 10px 16px;
-}
 
-.d-header .contents .current-username button {
-    margin: 18px 16px;
+.container {
+    border: 0 none;
+    margin: 0 auto !important;
+    width: 984px !important;
 }
-
-.d-header .contents .icons .icon {
-    padding: 14px 8px;
+#main-outlet {
+    padding-top: 0;
 }
-
-/* Fixes to extra-info */
-.extra-info-wrapper h1 .topic-link,
-.extra-info-wrapper h1 .topic-link:visited,
-.extra-info-wrapper h1 .topic-link:hover,
-.extra-info-wrapper h1 .topic-statuses {
-    color: #FFF;
-}
-
-/* Display the username as completely white and a block element. */
-.d-header .current-username a {
-    color: #fff;
+#main-outlet .container > .row {
+    background: #FFFFFF;
+    border-radius: 4px;
+    -moz-box-shadow: 0 0 3px #C9C9C9;
+    -webkit-box-shadow: 0 0 3px #C9C9C9;
+    box-shadow: 0 0 3px #C9C9C9;
+    border-bottom: 0;
+    clear: both; 
     display: block;
-    padding: 0 16px;
+    float: left;
+    margin: 10px 0 30px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.full-width {
+    width: auto;
+}
+#topic-list {
+    border-collapse: collapse;
+}
+#topic-list th {
+    background: #FEE3D2;
+}
+#topic-list th, #topic-list td {
+    display: table-cell;
+}
+#topic-list .star + .main-link {
+    padding-left: 5px;
 }
 
-/* Get rid of the left border for the icon list. */
-.d-header .icons {
+.category-column.first {
+    margin-right: 20px;
+}
+.category-column {
+    float: left;
+    width: 48%;
+}
+
+
+/*
+ * Buttons
+ */
+
+.btn,
+.btn.standard {
+    background-color: #C03F11;
+    background-image: linear-gradient(#DD4814, #C03F11);
+    border-radius: 4px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: Ubuntu,Arial,"libra sans",sans-serif;
+    font-size: 1em;
+    font-weight: 300;
     margin: 0;
+    padding: 8px 14px;
+    text-decoration: none;
+    border: 0;
 }
-
-/* Create the beveled border that separates each "button" in the header. This
-   is accomplished by creating a light border on the right of the outer containers. */
-.d-header .icons > li,
-.d-header .current-username {
-    border: none;
-    border-right: 1px solid rgb(92.407%,35.843%,16.102%);
-}
-
-/* Do the same for the inner elements, using a darker color this time. */
-.d-header .icons .icon,
-.d-header .current-username a {
-    border: none;
-    border-right: 1px solid rgb(77.497%,25.248%,7.013%) !important;
-}
-
-/* Get rid of the border radius for icons and other non-essential text effects. */
-.d-header .icons .icon {
-    border-radius: 0 !important;
-    box-shadow: none;
-    color: #eb9172;
-    padding: 4px 8px;
-}
-
-.d-header .icons li:not(.active) .icon:hover,
-.d-header .current-username a:hover {
-    background-color: #e1662f;
-    color: white;
+.btn:hover,
+.btn.standard:hover {
+    background: #dd4814;
     text-decoration: none;
 }
+.btn[href] {
+    color: #ffffff;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #dd4814;
+    background-image: none;
+    box-shadow: inset none;
+}
+#show-topic-admin {
+    background-color: #FFFFFF;
+    background-image: linear-gradient(to bottom, #FFFFFF, #EEEEEE);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: #565656;
+}
+.user-main {
+    width: 720px;
+}
 
-.d-dropdown {
+.btn[disabled] {
+    opacity: 0.5;
+    background: #dd4814; 
+}
+.cancel {
+    text-transform:capitalize;
+}
+
+/*
+ * Meta
+ */
+
+.topic-body,
+.topic-meta-data{
+    border-top: 0;
+}
+.topic-meta-data {
+    padding-top: 20px;
+}
+.topic-meta-data-inside {
     margin-top: 0;
 }
-
-.d-header .icons .active .icon {
-    color: #dd4814;
+.topic-meta-data h3 {
+    line-height: 1.6;
 }
 
-/* Buttons should be orange. */
-.btn-primary {
-    background: #e45735 !important;
-    border-color: #ac3d22;
-}
 
-#topic-list .main-link .title {
-    color: #333;
-}
+/*
+ * Bio
+ */
 
-#topic-list .main-link .title:visited {
-    color: #111;
+.avatar-wrapper img {
+    border-radius: 4px;
+    float: left;
 }
-
-#topic-list .main-link .title:hover {
-    color: #666;
-    text-decoration: underline;
-}
-
-#topic-list .main-link .badge {
-    color: #fff;
-}
-
-body .coldmap-low {
-    color: #ddd !important;
-}
-
-body .coldmap-high {
-    color: #333 !important;
-}
-
-body .coldmap-med {
-    color: #AEA79F !important;
-}
-
-.d-header .icons .badge-notification {
-    top: 1px;
-}
-
-.nav-pills {
-    font-famil: "Ubuntu", "Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
-.extra-info-wrapper .topic-status > .icon {
-    color: #fff;
-}
-
-#nav-global .nav-global-wrapper {
+.nav-stacked > li > a {
     font-weight: 300;
-    width: 1112px !important;
 }
-
-#nav-global {
-    z-index: 9999 !important;
+.user-main .about .details .primary .bio a[href] {
+    color: #DD4814;
 }
-
-.extra-info-wrapper h1 .topic-link {
-    text-overflow: ellipsis;
-    max-width: 720px;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
+.user-main .about .details .primary {
+    float: none;
+    width: 100%;
 }
-
-#similar-topics {
-    background-color: #ffc;
-    border: 1px solid #cc0;
+.user-main .about .details .secondary {
+    float: none;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.user-navigation li {
+    margin-bottom: 0;
 }
 
 CSS
