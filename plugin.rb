@@ -5,8 +5,6 @@
 
 register_css <<CSS
 
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
-
 /**
  * Ubuntu Discourse
  *
@@ -29,6 +27,10 @@ register_css <<CSS
 /**
  * General
  */
+
+html {
+    background: url(http://assets.ubuntu.com/sites/ubuntu/latest/u/img/patterns/body_bg.jpg) !important;
+}
 
 body,
 .onebox-result .onebox-result-body{
