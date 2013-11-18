@@ -49,10 +49,10 @@ body #main a.star,
 }
 body #main a.star.starred,
 .icon-star.starred {
-    color: #ffffff !important;
+    color: #E45735 !important;
 }
 body #main .topic-list-item a.star,{
-    color: #ffffff !important;
+    color: #eee !important;
 }
 body #main .topic-list-item a.star.starred,{
     color: #E45735 !important;
