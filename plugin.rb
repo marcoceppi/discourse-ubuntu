@@ -48,15 +48,18 @@ body #main a.star,
     color: #eee !important;
 }
 body #main a.star.starred,
-.icon-star.starred {
+body #main .topic-list-item a.star.starred,
+.icon-star.starred,{
     color: #E45735 !important;
 }
 body #main .topic-list-item a.star,{
     color: #eee !important;
 }
-body #main .topic-list-item a.star.starred,{
-    color: #E45735 !important;
+
+body #main .d-header .extra-info-wrapper a.star.starred{
+    color: #fff !important;
 }
+
 
 .dropdown-toggle span.caret {
     border-top: 4px solid #FFFFFF;
