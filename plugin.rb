@@ -446,4 +446,12 @@ body #main .d-header .extra-info-wrapper a.star.starred{
     width: 440px;
 }
 
+.settings .setting .setting-label {
+    width: 146px;
+}
+
+.site-settings-detail {
+    width: 735px;
+}
+
 CSS
