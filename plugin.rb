@@ -419,10 +419,10 @@ body #main .topic-list-item a.star.starred,{
  **/
 
 #topic-list tr td.posters{
-    width: 180px;
+    width: 200px;
 }
 #topic-list tr td.posts{
-    width: 60px;
+    width: 40px;
 }
 
 CSS
