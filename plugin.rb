@@ -427,7 +427,7 @@ body #main .d-header .extra-info-wrapper a.star.starred{
 }
 
 #main-outlet {
-    padding-top: 15 !important;
+    padding-top: 15px !important;
 }
 
 .row {
