@@ -43,23 +43,21 @@ body code,
 body pre {
     font-family: "Ubuntu Mono","Consolas","Monaco","Lucida Console","Courier New",Courier,monospace;
 }
-body #main a.star,
-.icon-star {
-    color: #eee;
-}
 body #main a.star.starred,
 body #main .topic-list-item a.star.starred,
 .icon-star.starred,{
     color: #E45735;
 }
-body #main .topic-list-item a.star,{
+
+body #main .topic-list-item a.star,
+body #main .d-header .extra-info-wrapper a.star,
+body #main a.star,
+.icon-star {
     color: #eee;
 }
-
 body #main .d-header .extra-info-wrapper a.star.starred{
     color: #fff;
 }
-
 
 .dropdown-toggle span.caret {
     border-top: 4px solid #FFFFFF;
