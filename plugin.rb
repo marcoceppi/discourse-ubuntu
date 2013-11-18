@@ -418,10 +418,10 @@ body #main .topic-list-item a.star.starred,{
  * Marco
  **/
 
-#topic-list .posters{
+#topic-list tr td.posters{
     width: 180px;
 }
-#topic-list .posts{
+#topic-list tr td.posts{
     width: 60px;
 }
 
