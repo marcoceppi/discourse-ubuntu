@@ -1,12 +1,11 @@
 # name: discourse-ubuntu
-# about: ubuntu style for Discourse
+# about: Ubuntu style for Discourse
 # version: 0.2
 # authors: Marco Ceppi
 
 register_css <<CSS
 
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
-
 
 /**
  * Ubuntu Discourse
