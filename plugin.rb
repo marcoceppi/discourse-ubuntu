@@ -426,4 +426,24 @@ body #main .d-header .extra-info-wrapper a.star.starred{
     width: 40px;
 }
 
+#main-outlet {
+    padding-top: 15 !important;
+}
+
+.row {
+    padding: 0 !important;
+}
+
+#main .d-header .extra-info-wrapper {
+    width: 66%;
+}
+
+.dashboard-left {
+    width: 450px;
+}
+
+.dashboard-stats {
+    width: 440px;
+}
+
 CSS
