@@ -45,7 +45,7 @@ body pre {
 }
 body #main a.star,
 .icon-star {
-    color: #E45735 !important;
+    color: #eee !important;
 }
 body #main a.star.starred,
 .icon-star.starred {
