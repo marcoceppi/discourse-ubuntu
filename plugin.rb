@@ -352,8 +352,9 @@ body #main .d-header .extra-info-wrapper a.star.starred{
     border: 1px solid rgba(0, 0, 0, 0.3);
     color: #565656;
 }
-.user-main {
-    width: 720px;
+
+.container .user-main {
+    width: 724px;
 }
 
 .btn[disabled] {
