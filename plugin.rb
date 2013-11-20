@@ -455,4 +455,8 @@ body #main .d-header .extra-info-wrapper a.star.starred{
     width: 735px;
 }
 
+#topic-list.categories .category .subcategories .badge-category {
+    margin-top: 5px;
+    display: inline-block;
+}
 CSS
