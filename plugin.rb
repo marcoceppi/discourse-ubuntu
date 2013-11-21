@@ -459,4 +459,10 @@ body #main .d-header .extra-info-wrapper a.star.starred{
     margin-top: 5px;
     display: inline-block;
 }
+
+.list-controls a.badge-category.category-dropdown-button {
+    padding: 2px 9px 2px 9px;
+    margin-left: -5px;
+}
+
 CSS
