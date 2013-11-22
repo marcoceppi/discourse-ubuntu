@@ -451,8 +451,20 @@ body #main .d-header .extra-info-wrapper a.star.starred{
     width: 146px;
 }
 
-.site-settings-detail {
+.site-settings-detail .settings .setting .setting-value {
+    width: 418px;
+}
+
+.admin-contents .site-settings-detail {
     width: 735px;
+}
+
+.d-header .extra-info-wrapper .topic-link {
+    display: inline-block;
+    width: 540px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 #topic-list.categories .category .subcategories .badge-category {
