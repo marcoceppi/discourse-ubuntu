@@ -94,7 +94,7 @@ body #main .d-header .extra-info-wrapper a.star.starred{
     margin: 0;
 }
 #main .d-header .extra-info-wrapper {
-    width: 68%;
+    width: 68% !important;
 }
 #main .d-header .extra-info-wrapper a,
 #main .d-header .title a {
@@ -461,7 +461,7 @@ body #main .d-header .extra-info-wrapper a.star.starred{
 
 .d-header .extra-info-wrapper .topic-link {
     display: inline-block;
-    width: 540px;
+    width: 550px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
