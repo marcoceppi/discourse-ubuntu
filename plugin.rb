@@ -461,7 +461,7 @@ body #main .d-header .extra-info-wrapper a.star.starred{
 
 .d-header .extra-info-wrapper .topic-link {
     display: inline-block;
-    width: 550px;
+    width: 515px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
