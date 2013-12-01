@@ -421,7 +421,7 @@ body #main .d-header .extra-info-wrapper a.star.starred{
  **/
 
 #topic-list tr td.posters{
-    width: 200px;
+    width: 230px;
 }
 #topic-list tr td.posts{
     width: 40px;
